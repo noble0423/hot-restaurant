@@ -10,6 +10,15 @@ var PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+app.get("/", function (req, res) {
+  res.sendFile(path.join(__dirname, "homepage.html"))
+})
+
+app.get("/tables", function (req, res) {
+  res.sendFile(path.join(__dirname, "reservation_views.html")); 
+})
+
+
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
