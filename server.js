@@ -76,6 +76,7 @@ app.get("/api/waitList", function(req, res){
   return res.json(waitList);
 }); 
 
+
 app.post("/reservation", function (req, res){
   var data = req.body 
   if (reservations.length > 10) {
@@ -86,3 +87,4 @@ app.post("/reservation", function (req, res){
     res.end(); 
   }
 }); 
+
